@@ -32,12 +32,4 @@ jobs:
       - name: Build VuePress site
         run: npm run docs:build
 
-      # 查看 workflow 的文档来获取更多信息
-      # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # 部署到 gh-pages 分支
-          branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
-          folder: docs/.vuepress/dist
+      # 部署步骤已移除，将由 Netlify 处理

@@ -4,7 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
     bundler: viteBundler(),
-    base: "/english-note/",
+    base: "/",
     // 站点配置
     lang: 'zh-CN',
     title: '英语语法笔记',
