@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://hzpt-inet-club.github.io/english-note/logo/logo.svg">
-</div>
+<div align="center">  <img src="https://tdw-hot.github.io/english-note/logo/logo.svg"></div>
 
 <h1 align="center">英语语法笔记</h1>
 
@@ -27,32 +25,45 @@
 ## 安装
 
 ### 直接使用 「推荐」
-点击[链接](https://hzpt-inet-club.github.io/english-note/)打开网页直接可以阅读和学习。
+点击[链接](https://tdw-hot.github.io/english-note/)打开网页直接可以阅读和学习。
 
 ### 本地使用
 
 1. 下载到本地
 
 ```shell
-git clone https://github.com/hzpt-inet-club/english-note.git
+git clone https://github.com/tdw-hot/english-note.git
 ```
 
-2. 进入更目录后
+2. 进入项目根目录并安装依赖
 
 ```shell
-yarn init
+cd english-note
+npm install
 ```
 
-3. 运行
+3. 本地开发预览
 ```shell
-yarn docs:dev
+npm run docs:dev
+```
+
+4. 构建静态网站
+```shell
+npm run docs:build
 ```
 
 ## 使用说明
 
-本项目使用 [VuePress](https://github.com/vuepress/vuepress-next) 进行文档编写，并且使用 [GitHub Actions](https://github.com/features/actions) 全自动的部署在 [GitHub Page](https://pages.github.com) 上。
+本项目使用 [VuePress 2.0](https://v2.vuepress.vuejs.org/zh/) 进行文档编写，并且使用 [GitHub Actions](https://github.com/features/actions) 全自动的部署在 [GitHub Page](https://pages.github.com) 上。
 
-所有的内容在 [docs](https://github.com/hzpt-inet-club/english-note/tree/master/docs) 文件夹内，全部内容都采用了 [MarkDown](https://daringfireball.net/projects/markdown/) 的形式进行编写。
+所有的内容在 [docs](https://github.com/tdw-hot/english-note/tree/master/docs) 文件夹内，全部内容都采用了 [MarkDown](https://daringfireball.net/projects/markdown/) 的形式进行编写。
+
+## 技术栈
+
+- [VuePress 2.0](https://v2.vuepress.vuejs.org/zh/): Vue驱动的静态网站生成器
+- [Node.js](https://nodejs.org/): JavaScript运行环境
+- [GitHub Actions](https://github.com/features/actions): 自动化工作流
+- [GitHub Pages](https://pages.github.com): 静态网站托管服务
 
 ## 维护者
 
@@ -78,8 +89,8 @@ yarn docs:dev
 
 感谢以下参与项目的人：
 
-[![contributors](/contributors/contributors.svg)](https://github.com/hzpt-inet-club/english-note/graphs/contributors)
+[![contributors](/contributors/contributors.svg)](https://github.com/tdw-hot/english-note/graphs/contributors)
 
 ## 使用许可
 
-[MIT](https://github.com/hzpt-inet-club/english-note/blob/master/LICENSE) © hzpt-inet-club
+[MIT](https://github.com/tdw-hot/english-note/blob/master/LICENSE) © tdw-hot

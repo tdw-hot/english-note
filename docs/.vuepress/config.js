@@ -1,4 +1,7 @@
-module.exports = {
+import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
+
+export default defineUserConfig({
     base: "/english-note/",
     // 站点配置
     lang: 'zh-CN',
@@ -13,14 +16,14 @@ module.exports = {
       },
     },
 
-    themeConfig: {
-      docsRepo: 'https://github.com/hzpt-inet-club/english-note',
+    theme: defaultTheme({
+      docsRepo: 'https://github.com/tdw-hot/english-note',
       docsBranch: 'master',
       docsDir: 'docs',
       editLinkPattern: ':repo/edit/:branch/:path',
       contributors: false,
       logo: "/logo/logo.svg",
-      repo: "hzpt-inet-club/english-note",
+      repo: "tdw-hot/english-note",
       darkMode: false,
       sidebar: [
         '/guide/grammar.md',
@@ -31,6 +34,5 @@ module.exports = {
         '/guide/preposition.md',
         '/guide/compare.md',
       ],
-    },
-    
-  }
+    }),
+})
