@@ -1,6 +1,6 @@
 # English Note
 
-本项目是一个使用 VuePress 构建的英语语法笔记网站。
+本项目是一个使用 VuePress `2.0.0-rc.2` 构建的英语语法笔记网站。
 
 ## 环境要求
 
@@ -8,6 +8,8 @@
 
 *   [Node.js](https://nodejs.org/) (建议版本 18.x 或更高版本，与 GitHub Actions 工作流中使用的版本一致)
 *   npm (通常随 Node.js 一同安装)
+
+为了确保依赖版本的一致性，请使用项目根目录下的 `package-lock.json` 文件。在执行 `npm install` 时，npm 会自动根据此文件安装精确的依赖版本。
 
 ## 本地开发
 
@@ -59,7 +61,7 @@ npm run docs:build
     该工作流会执行以下操作：
     *   检出代码。
     *   设置 Node.js 环境 (版本 18.x)。
-    *   使用 `npm ci` 安装依赖。
+    *   使用 `npm ci` (这是一个更严格的安装命令，常用于 CI 环境，它依赖 `package-lock.json`) 安装依赖。
     *   使用 `npm run docs:build` 构建站点。
     *   将 `docs/.vuepress/dist/` 目录中的内容部署到 `gh-pages` 分支。
 
