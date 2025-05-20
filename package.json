@@ -1,15 +1,22 @@
 {
   "name": "english-note",
   "version": "1.0.0",
-  "description": "从0开始的英语语法学习",
+  "description": "从0开始学习英语语法",
   "main": "index.js",
-  "repository": "https://github.com/tdw-hot/english-note.git",
-  "license": "MIT",
-  "devDependencies": {
-    "vuepress": "^2.0.0-rc.2"
-  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "keywords": [
+    "english",
+    "grammar",
+    "vuepress"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.67",
+    "@vuepress/theme-default": "2.0.0-beta.67",
+    "vuepress": "2.0.0-beta.67"
   }
-}
+} 

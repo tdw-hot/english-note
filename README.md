@@ -1,96 +1,84 @@
-<div align="center">  <img src="https://tdw-hot.github.io/english-note/logo/logo.svg"></div>
+# English Note
 
-<h1 align="center">英语语法笔记</h1>
+本项目是一个使用 VuePress 构建的英语语法笔记网站。
 
-## 背景
+## 环境要求
 
-这个项目由 [xiaoxunyao](https://github.com/xiaoxunyao) 提出，并且大量文本编辑的工作由他负责查阅资料和整理资料完成。在这个社会学会英语对于每位程序员的帮助都是有重大意义的，所以 [INet](https://github.com/hzpt-inet-club) 社区开始着手编写语法笔记，争取将复杂困难的语法知识点掰碎了告诉大家。
+请确保您的开发环境中已安装以下软件：
 
-很多人对于英语都是不屑的，因为对于大部分的同学而言短期内不会考虑出国的问题，所以在社区内的不少同学英语都是较为薄弱的地方，这边可以参考[知乎](https://zhihu.com)上的一则提问 [英语是否会成为开发工程师的发展瓶颈？](https://www.zhihu.com/question/55998388/answer/167024826) 中 [Evan You](https://github.com/yyx990803) 的回答。
+*   [Node.js](https://nodejs.org/) (建议版本 18.x 或更高版本，与 GitHub Actions 工作流中使用的版本一致)
+*   npm (通常随 Node.js 一同安装)
 
-> 不仅英语差会成为瓶颈，英语好还能成为优势，因为学习效率会比别人高。像我这样半路出家自学的人，只能靠英语了...        --尤雨溪
+## 本地开发
 
-学习的方法很多大神都贡献了很多方法和方式，我们参考了 [Evan You](https://github.com/yyx990803) 的方法，具体参考[知乎](https://zhihu.com)上的一则提问 [上了大学还是完全不懂语法只想靠美剧或者英语书籍来的语感强行记忆，这种做法靠谱吗？](https://www.zhihu.com/question/22027426/answer/21944576) ，方法如下
+1.  **克隆项目** (如果您尚未克隆):
+    ```bash
+    git clone https://github.com/your-username/english-note.git
+    cd english-note
+    ```
 
-> 语法也不是完全不需要。或者说，你需要做到的是借助语法去理解你看不懂的句子，而不是去记忆语法本身。理解的过程就是培养语感的过程。从这个角度来说，一些基础的语法知识，比如时态、从句啥的，是培养语感的前提条件。但是，我的看法是语法过了初学者的坎之后就不再是需要刻意去研究的东西，非英语专业尤其如此。
-> 
-> 我自己就是语感党，以前考试从来都靠语感，从来不会去记忆具体的语法规则。至于效果... 我高二托福考了673（当时满分677），上海高考 146/150，还拿了个英语比赛的一等奖，高考可以加20分的那种。高中毕业后直接来美国读本科（参加高考是为了防止签证签不出），读硕士，工作，除了本科时候 Liberal Arts 的恐怖阅读量有点累，其他时候英语上从来没有什么障碍。
->
-> 但是联系到题主的问题，语感的培养绝对不能只靠被动的接收，必须要靠主动的使用。只看书看剧带来的提高是非常有限的，语感只有在使用中才能提高。所以，除了看和听，还要写和说。写嘛，现在网络这么发达，多逛逛外国网站跟人交流或者辩论都可以，但务必保证发言要言之有物。之所以辩论会很有效是因为你需要很努力地思考组织语言去论证自己的正确性。说的方面，在缺少口语交流环境的情况下，背是一个机械但有效的方法。以我自己来说，实质性提高英语的主要手段是靠背新概念 + 背词汇...
-> 
-> 所以说到底还是没有什么捷径可走的，想提高英语总得有所付出。 --尤雨溪
+2.  **安装依赖**:
+    在项目根目录下运行以下命令安装项目所需的依赖包。
+    ```bash
+    npm install
+    ```
 
-这边完成了第一步，语法的练习，后续的方法可以采用[百词斩](https://www.baicizhan.com/)和[新概念英语](https://zh.wikipedia.org/zh-cn/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD)作为教材进行学习。
+3.  **启动本地开发服务器**:
+    运行以下命令启动 VuePress 的本地开发服务器。
+    ```bash
+    npm run docs:dev
+    ```
+    命令执行成功后，您可以在浏览器中访问 `http://localhost:8080` (或控制台输出的实际端口号) 查看效果。
 
-## 安装
+## 构建项目
 
-### 直接使用 「推荐」
-点击[链接](https://tdw-hot.github.io/english-note/)打开网页直接可以阅读和学习。
+如果您需要手动构建项目的静态文件，可以运行以下命令：
 
-### 本地使用
-
-1. 下载到本地
-
-```shell
-git clone https://github.com/tdw-hot/english-note.git
-```
-
-2. 进入项目根目录并安装依赖
-
-```shell
-cd english-note
-npm install
-```
-
-3. 本地开发预览
-```shell
-npm run docs:dev
-```
-
-4. 构建静态网站
-```shell
+```bash
 npm run docs:build
 ```
 
-## 使用说明
+构建完成后，静态文件将生成在 `docs/.vuepress/dist/` 目录下。
 
-本项目使用 [VuePress 2.0](https://v2.vuepress.vuejs.org/zh/) 进行文档编写，并且使用 [GitHub Actions](https://github.com/features/actions) 全自动的部署在 [GitHub Page](https://pages.github.com) 上。
+## 部署
 
-所有的内容在 [docs](https://github.com/tdw-hot/english-note/tree/master/docs) 文件夹内，全部内容都采用了 [MarkDown](https://daringfireball.net/projects/markdown/) 的形式进行编写。
+本项目配置了 GitHub Actions 工作流，可以在代码推送到 `master` 分支时自动构建并将站点部署到 GitHub Pages。
 
-## 技术栈
+### 自动化部署 (推荐)
 
-- [VuePress 2.0](https://v2.vuepress.vuejs.org/zh/): Vue驱动的静态网站生成器
-- [Node.js](https://nodejs.org/): JavaScript运行环境
-- [GitHub Actions](https://github.com/features/actions): 自动化工作流
-- [GitHub Pages](https://pages.github.com): 静态网站托管服务
+1.  **推送代码**:
+    将您的本地更改提交并推送到 GitHub 仓库的 `master` 分支。
+    ```bash
+    git add .
+    git commit -m "Your commit message"
+    git push origin master
+    ```
 
-## 维护者
+2.  **GitHub Actions**:
+    GitHub Actions 会自动检测到 `master` 分支的更新，并触发 `.github/workflows/docs.yml` 中定义的工作流。
+    该工作流会执行以下操作：
+    *   检出代码。
+    *   设置 Node.js 环境 (版本 18.x)。
+    *   使用 `npm ci` 安装依赖。
+    *   使用 `npm run docs:build` 构建站点。
+    *   将 `docs/.vuepress/dist/` 目录中的内容部署到 `gh-pages` 分支。
 
-[@hzpt-inet](https://github.com/hzpt-inet)
+3.  **配置 GitHub Pages**:
+    *   在您的 GitHub 仓库中，进入 "Settings" -> "Pages"。
+    *   在 "Build and deployment" 下的 "Source" 部分，选择 "Deploy from a branch"。
+    *   在 "Branch" 部分，选择 `gh-pages` 分支，并保持路径为 `/ (root)`。
+    *   点击 "Save"。
 
-[@xiaoxunyao](https://github.com/xiaoxunyao)
+    配置完成后，您的站点将通过 `https://<your-username>.github.io/english-note/` (或您仓库配置的自定义域名) 访问。请注意，`base` 路径在 `docs/.vuepress/config.js` 中已设置为 `/english-note/`。
 
-## 如何贡献
+### 手动部署
 
-在 [INet](https://github.com/hzpt-inet-club) 社区中拥有一个 [home](https://github.com/hzpt-inet-club/home) 项目，详细的说明了如何进行贡献项目，简单来说`提出一个issue`和`提出一个pull Request` 都是可以的。
+如果您希望手动部署，可以将 `docs/.vuepress/dist/` 目录下的所有文件上传到您选择的静态网站托管服务。
 
 ## 贡献
 
-### 内容贡献
+欢迎对本项目做出贡献！如果您有任何建议或发现错误，请随时提交 Pull Request 或创建 Issue。
 
-感谢!
+## 许可证
 
-[百词斩](https://www.baicizhan.com/) 提供内容贡献
-
-[VuePress](https://github.com/vuepress/vuepress-next) 提供项目贡献
-
-### 人员贡献
-
-感谢以下参与项目的人：
-
-[![contributors](/contributors/contributors.svg)](https://github.com/tdw-hot/english-note/graphs/contributors)
-
-## 使用许可
-
-[MIT](https://github.com/tdw-hot/english-note/blob/master/LICENSE) © tdw-hot
+[MIT](LICENSE) 
